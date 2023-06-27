@@ -1,0 +1,149 @@
+/* Reiniciamos los estilos por defecto del navegador */
+body, ul {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Estilos del menú */
+  header {
+    background-color: #24292e;
+    height: 50px;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+    padding: 0 20px;
+  }
+  
+  nav li {
+    margin-right: 20px;
+  }
+  
+  nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  nav a:hover {
+    color: #f0f6fc;
+  }
+  .logo-img {
+    width: 40px; /* Ajusta el ancho deseado */
+    height: auto; /* La altura se ajustará proporcionalmente */
+  }
+  .profile-info {
+    background-color: #2b2a2a;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .profile-name {
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .profile-location,
+  .profile-email,
+  .profile-college {
+    color: #d8d8d8;
+    margin-bottom: 10px;
+  }
+  
+  .profile-bio {
+    color: #dddddd;
+  }
+
+  .card {
+    border: none;
+  }
+  
+  .card-title {
+    color: #706e6e;
+    font-size: 18px;
+  }
+  
+  .card-text {
+    color: #ccc;
+  }
+  
+  .btn-primary {
+    background-color: #4f5052;
+    border-color: #202020;
+  }
+  
+  .btn-primary:hover {
+    background-color: #064a9c;
+    border-color: #064a9c;
+  }
+
+  .btn-primary.btn-github {
+    background-color: #1b1f23;
+    border-color: #1b1f23;
+    color: #fff;
+  }
+  
+  .btn-primary.btn-github:hover {
+    background-color: #161b22;
+    border-color: #161b22;
+  }
+
+
+  .timeline {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .timeline li {
+    position: relative;
+    padding-bottom: 20px;
+  }
+  
+  .timeline li::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 10px;
+    width: 2px;
+    height: 100%;
+    background-color: #343a40; /* Color oscuro de fondo */
+  }
+  
+  .timeline .timeline-content {
+    padding-left: 30px;
+  }
+  
+  .timeline .timeline-title {
+    color: #fff;
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+  
+  .timeline .timeline-description {
+    color: #ccc;
+    margin-bottom: 10px;
+  }
+  
+  .timeline .timeline-date {
+    color: #aaa;
+    font-size: 14px;
+  }
+
+  .github-style {
+    background-color: #0d1117; /* Color de fondo oscuro similar a GitHub */
+    color: #c9d1d9; /* Color de texto principal */
+  }
+
+  .custom-frame-style {
+    background-color: #161b22; /* Color de fondo oscuro similar a GitHub */
+    border-radius: 10px; /* Redondea las esquinas del marco */
+    padding: 20px; /* Espaciado interno para el contenido del marco */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Sombra para el marco */
+    color: #c9d1d9; /* Color de texto dentro del marco */
+  }
