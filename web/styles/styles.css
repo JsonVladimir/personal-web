@@ -22,7 +22,7 @@ body, ul {
   nav li {
     margin-right: 20px;
   }
-  
+
   nav a {
     color: #ffffff;
     text-decoration: none;
@@ -62,6 +62,10 @@ body, ul {
 
   .card {
     border: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  }
+  .card:last-of-type{
+    margin-bottom: 1.5rem;
   }
   
   .card-title {
@@ -71,16 +75,6 @@ body, ul {
   
   .card-text {
     color: #ccc;
-  }
-  
-  .btn-primary {
-    background-color: #4f5052;
-    border-color: #202020;
-  }
-  
-  .btn-primary:hover {
-    background-color: #064a9c;
-    border-color: #064a9c;
   }
 
   .btn-primary.btn-github {
@@ -142,6 +136,7 @@ body, ul {
 
   .custom-frame-style {
     background-color: #161b22; /* Color de fondo oscuro similar a GitHub */
+    height: 80%;
     border-radius: 10px; /* Redondea las esquinas del marco */
     padding: 20px; /* Espaciado interno para el contenido del marco */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Sombra para el marco */
