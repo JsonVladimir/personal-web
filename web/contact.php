@@ -18,14 +18,13 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="./js/scripts.js"></script>
-
 </head>
 
 <body class="github-style">
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div class="container">
-                <a class="navbar-brand" href="#">
+        <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="inicio.html">
                     <img src="images/VladINC.png" alt="Logo" class="logo-img">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -38,13 +37,22 @@
                             <a class="nav-link" href="inicio.html">Inicio</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="about.html">Acerca de</a>
+                            <a class="nav-link disabled" href="#">About me 
+                                <span class="badge rounded-pill text-bg-danger disabled">OFF</span>
+                            </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="portfolio.html">Portafolio</a>
+                            <a class="nav-link disabled" href="#">Project Gallery
+                                <span class="badge rounded-pill text-bg-danger disabled">OFF</span>
+                            </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Contacto</a>
+                            <a class="nav-link disabled" href="#">Services
+                                <span class="badge rounded-pill text-bg-warning disabled">COMING SOON!</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active disabled" aria-current="page" href="#">Contacto</a>
                         </li>
                     </ul>
                 </div>
@@ -52,11 +60,11 @@
         </nav>
     </header>
 
-    <div class=" content-wrapper container mt-5">
+    <div class="container mt-5">
         <div class="row">
             <div class="col-lg-6 mx-auto">
                 <h2 class="text-light text-center ">Formulario de Contacto</h2>
-                <form>
+                <form  method="POST">
                     <div class="mb-3">
                         <label for="name" class="form-label text-ligh">Nombre:</label>
                         <div class="input-group">
@@ -83,11 +91,46 @@
                     </div>
                 </form>
             </div>
+
+            <div class="row">   
+            <div class="col-sm-5 mx-auto">
+                <?php
+                    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                        $name = $_POST["name"];
+                        $email = $_POST["email"];
+                        $message = $_POST["message"];
+
+                        // Configurar los detalles del correo electrónico
+                        $to = "calaresni@gmail.com";
+                        $subject = "Nuevo mensaje de contacto";
+                        $body = "Nombre: " . $name . "\n";
+                        $body .= "Email: " . $email . "\n";
+                        $body .= "Mensaje: " . $message;
+
+                        // Enviar el correo electrónico
+                        $headers = "From: " . $email . "\r\n";
+                        $headers .= "Reply-To: " . $email . "\r\n";
+                        ini_set("SMTP", "smtp.gmail.com");
+                        ini_set("smtp_port", "25");
+
+                        echo "<div id='alert' class='alert alert-success alert-dismissible fade show' role='alert'> ¡El correo electrónico ha sido enviado exitosamente!";
+                        echo "<button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>";
+                        echo "</div>";
+                    }
+                ?>
+                 <!-- Scripts JS -->
+            <script>
+                function showAlert() {
+                    document.getElementById("alert").style.display = "block";
+                }
+            </script> 
+                
+            </div>
+            </div>
         </div>
     </div>
-
 </body>
-<footer class=" footer bg-dark text-light py-4">
+<footer class="fixed-bottom bg-dark text-light py-4">
     <div class="container text-center">
         <div class="row">
             <div class="col-lg-6">
