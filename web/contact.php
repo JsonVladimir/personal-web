@@ -2,29 +2,18 @@
 <html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jheyson Aburto | Inicio</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
-    <link rel="stylesheet" href="styles/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    <!--redes íconos-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="./js/scripts.js"></script>
+    
+    <?php
+    include_once "utils/head.php";
+    ?>
+    <title>Jheyson Aburto | Contact</title>
 </head>
 
 <body class="github-style">
     <header>
         <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="inicio.html">
+            <div class="container">
+                <a class="navbar-brand" href="inicio.php">
                     <img src="images/VladINC.png" alt="Logo" class="logo-img">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -34,25 +23,26 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="inicio.html">Inicio</a>
+                            <a class="nav-link" href="inicio.php"><i class="fas fa-home "></i> Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link disabled" href="#">About me 
+                            <a class="nav-link disabled" href="#"><i class="fas fa-user "></i> About me
                                 <span class="badge rounded-pill text-bg-danger disabled">OFF</span>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link disabled" href="#">Project Gallery
+                            <a class="nav-link disabled" href="#"><i class="fas fa-archive"></i> Project Gallery
                                 <span class="badge rounded-pill text-bg-danger disabled">OFF</span>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link disabled" href="#">Services
+                            <a class="nav-link disabled" href="#"><i class="fas fa-terminal"></i> Services
                                 <span class="badge rounded-pill text-bg-warning disabled">COMING SOON!</span>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active disabled" aria-current="page" href="#">Contacto</a>
+                            <a class="nav-link active disabled" aria-current="page" href="#"><i
+                                    class="fas fa-envelope"></i> Contacto</a>
                         </li>
                     </ul>
                 </div>
@@ -64,26 +54,32 @@
         <div class="row">
             <div class="col-lg-6 mx-auto">
                 <h2 class="text-light text-center ">Formulario de Contacto</h2>
-                <form  method="POST">
+                <form method="POST">
                     <div class="mb-3">
                         <label for="name" class="form-label text-ligh">Nombre:</label>
                         <div class="input-group">
-                            <span class="input-group-text bg-dark text-light border-secondary"><i class="fas fa-user"></i></span>
-                            <input type="text" class="form-control bg-dark text-light border-secondary" id="name" name="name" required>
+                            <span class="input-group-text bg-dark text-light border-secondary"><i
+                                    class="fas fa-user"></i></span>
+                            <input type="text" class="form-control bg-dark text-light border-secondary" id="name"
+                                name="name" required>
                         </div>
                     </div>
                     <div class="mb-3">
                         <label for="email" class="form-label text-light">Email:</label>
                         <div class="input-group">
-                            <span class="input-group-text bg-dark text-light border-secondary"><i class="fas fa-envelope"></i></span>
-                            <input type="email" class="form-control bg-dark text-light border-secondary" id="email" name="email" required>
+                            <span class="input-group-text bg-dark text-light border-secondary"><i
+                                    class="fas fa-envelope"></i></span>
+                            <input type="email" class="form-control bg-dark text-light border-secondary" id="email"
+                                name="email" required>
                         </div>
                     </div>
                     <div class="mb-3">
                         <label for="message" class="form-label text-light">Mensaje:</label>
                         <div class="input-group">
-                            <span class="input-group-text bg-dark text-light border-secondary"><i class="fas fa-comment"></i></span>
-                            <textarea class="form-control bg-dark text-light border-secondary" id="message" name="message" rows="5" required></textarea>
+                            <span class="input-group-text bg-dark text-light border-secondary"><i
+                                    class="fas fa-comment"></i></span>
+                            <textarea class="form-control bg-dark text-light border-secondary" id="message"
+                                name="message" rows="5" required></textarea>
                         </div>
                     </div>
                     <div class="text-center mb-3">
@@ -92,9 +88,9 @@
                 </form>
             </div>
 
-            <div class="row">   
-            <div class="col-sm-5 mx-auto">
-                <?php
+            <div class="row">
+                <div class="col-sm-5 mx-auto">
+                    <?php
                     if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         $name = $_POST["name"];
                         $email = $_POST["email"];
@@ -117,37 +113,23 @@
                         echo "<button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>";
                         echo "</div>";
                     }
-                ?>
-                 <!-- Scripts JS -->
-            <script>
-                function showAlert() {
-                    document.getElementById("alert").style.display = "block";
-                }
-            </script> 
-                
-            </div>
+                    ?>
+                    <!-- Scripts JS -->
+                    <script>
+                        function showAlert() {
+                            document.getElementById("alert").style.display = "block";
+                        }
+                    </script>
+
+                </div>
             </div>
         </div>
     </div>
 </body>
 <footer class="fixed-bottom bg-dark text-light py-4">
-    <div class="container text-center">
-        <div class="row">
-            <div class="col-lg-6">
-                <p>&copy; 2023 Json Vladimir. All Right Reserved.</p>
-            </div>
-            <div class="col-lg-6 container mx-auto">
-                <ul class="list-inline text-lg-end">
-                    <li class="list-inline-item"><a href="#" class="text-decoration-none">Inicio</a></li>
-                    <li class="list-inline-item"><a href="https://www.github.com/tuusuario" target="_blank" class="text-light"><i class="fab fa-github fa-lg github-icon"></i></a></li>
-                    <li class="list-inline-item"><a href="https://www.instagram.com/tuusuario" target="_blank" class="text-light"><i class="fab fa-instagram fa-lg instagram-icon"></i></a></li>
-                    <li class="list-inline-item"><a href="https://www.linkedin.com/in/tuusuario" target="_blank" class="text-light"><i class="fab fa-linkedin fa-lg linkedin-icon"></i></a></li>
-                    <li class="list-inline-item"><a href="https://www.facebook.com/tuusuario" target="_blank" class="text-light "><i class="fab fa-facebook fa-lg facebook-icon"></i></a></li>
-                    <li class="list-inline-item"><a href="https://www.twitter.com/tuusuario" target="_blank" class="text-light"><i class="fab fa-twitter fa-lg twitter-icon"></i></a></li>                
-                </ul>
-            </div>
-        </div>
-    </div>
+    <?php
+    include_once "utils/footer.php"
+        ?>
 </footer>
 
 </html>

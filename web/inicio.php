@@ -2,30 +2,16 @@
 <html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jheyson Aburto | Inicio</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
-    <link rel="stylesheet" href="styles/styles.css">
-
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    <!--redes íconos-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="./js/scripts.js"></script>
-
+    <?php
+    include_once "utils/head.php";
+    ?>
+    <title>Jheyson Aburto | Home</title>
 </head>
+
 <body class="github-style">
     <header>
         <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
-            <div class="container-fluid">
+            <div class="container">
                 <a class="navbar-brand disabled" href="#">
                     <img src="images/VladINC.png" alt="Logo" class="logo-img">
                 </a>
@@ -36,25 +22,25 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
-                            <a class="nav-link active disabled" href="#">Home</a>
+                            <a class="nav-link active disabled" href="#"><i class="fas fa-home "></i> Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link disabled" href="#">About me 
+                            <a class="nav-link disabled" href="#"><i class="fas fa-user "></i> About me
                                 <span class="badge rounded-pill text-bg-danger disabled">OFF</span>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link disabled" href="#">Project Gallery
+                            <a class="nav-link disabled" href="#"><i class="fas fa-archive"></i> Project Gallery
                                 <span class="badge rounded-pill text-bg-danger disabled">OFF</span>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link disabled" href="#">Services
+                            <a class="nav-link disabled" href="#"><i class="fas fa-terminal"></i> Services
                                 <span class="badge rounded-pill text-bg-warning disabled">COMING SOON!</span>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="contact.php">Contact me</a>
+                            <a class="nav-link" href="contact.php"><i class="fas fa-envelope"></i> Contact me</a>
                         </li>
                     </ul>
                 </div>
@@ -63,7 +49,6 @@
     </header>
 
     <div class="container mt-5">
-        
         <div class="row"><!--iMAGEN PERFIL-->
             <div class="col-lg-4">
                 <div class="my-5 px-5 py-5 ">
@@ -73,18 +58,18 @@
             </div>
             <div class="col-lg-8 mb-5">
                 <div class="profile-info mx-auto my-5 px-5 py-4 border border-secondary">
-                    <h1 class="profile-name"><i class="fas fa-user-circle"></i> JsonVladimir</h1>
+                    <h1 class="profile-name"><i class="fas fa-user-circle "></i> JsonVladimir</h1>
                     <p class="profile-location"><i class="fas fa-map-marker-alt"></i> Lima, Perú</p>
-                    <p class="profile-email"><i class="far fa-envelope"></i> contacto@vladimiraburto.com</p>
-                    <p class="profile-college"><i class="fas fa-university"></i> Universidad Nacional Del Callao</p>
-                    <p class="profile-college"><i class="fas fa-graduation-cap"></i> Systems Engineer</p>
-                    <p class="profile-college"><i class="fas fa-building"></i>Osiptel</p>
+                    <p class="profile-email"><i class="far fa-envelope "></i> contacto@vladimiraburto.com</p>
+                    <p class="profile-college"><i class="fas fa-university "></i> Universidad Nacional Del Callao</p>
+                    <p class="profile-college"><i class="fas fa-graduation-cap "></i> Systems Engineer</p>
+                    <p class="profile-college"><i class="fas fa-building "></i> Osiptel</p>
                     <!--   <p class="profile-college"><i class="fab fa-github"></i> JsonVladimir</p>-->
-                    <p class="profile-college"><i class="fas fa-birthday-cake"></i> 06/05/2000</p>
-                    <p class="profile-bio"><i class="fa-solid fa-message-lines"></i> ¡Hola! Soy Jheyson, joven
-                        apasionado por la tecnología con gran interés en la Ingeniería de Datos, actualmente me
-                        desempeño. </p>
-                        
+                    <p class="profile-college"><i class="fas fa-birthday-cake "></i> 06/05/2000</p>
+                    <p class="profile-bio"><i class="fas fa-bullhorn "></i> ¡Hola! Soy Jheyson, un joven apasionado por
+                        la tecnología y con un gran interés en el mundo de la Ingeniería de Datos. Actualmente trabajo
+                        en OSIPTEL, pero estoy abierto de nuevas oportunidades en este fascinante campo. Si estás
+                        buscando un profesional comprometido y entusiasta, ¡estaré encantado de conversar contigo!</p>
                 </div>
             </div>
         </div>
@@ -92,15 +77,17 @@
     <div class="container mt-12 ">
         <div class="row">
             <div class="col-lg-4">
-                <h2 class="text-light mt-3">Mis proyectos</h2>
+                <h2 class="text-light mt-3 ms-3"><i class="fas fa-tasks"></i> Mis proyectos</h2>
                 <div class="card bg-dark text-light mt-3 border-secondary mx-2">
                     <div class="card-body">
-                        <h5 class="card-title"><i class="fas fa-code"></i> NumSoft | Calculadora Algebráica polinomial.</h5>
+                        <h5 class="card-title"><i class="fas fa-code"></i> NumSoft | Calculadora Algebráica polinomial.
+                        </h5>
                         <p class="card-text">En la universidad, desarrollé una calculadora como proyecto personal y como
                             herramienta de apoyo en un curso, para la resolución de diferentes ejercicios de Análisis
                             numérico.</p>
                         <!-- Aquí poner el proyecto BI-->
-                        <a href="https://github.com/DeVladINC/NumSoft" class="btn btn-primary btn-github" target="_blank">Ver más</a>
+                        <a href="https://github.com/DeVladINC/NumSoft" class="btn btn-primary btn-github"
+                            target="_blank">Ver más</a>
                     </div>
                 </div>
                 <div class="card bg-dark text-light mt-3 border-secondary mx-2">
@@ -134,7 +121,7 @@
                 <!-- Agrega más tarjetas de repositorios según sea necesario -->
             </div>
             <div class="col-lg-8 custom-frame-style mb-5">
-                <h2 class="text-light text">Mi exp</h2>
+                <h2 class="text-light text ms-3"><i class="fas fa-briefcase"></i> Mi exp</h2>
                 <iframe
                     src='https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=1I5NMZKE6FEaOZRWHCVwK-XCJamF5AVBAHwiio3HzkvA&font=Medula-Lato&lang=es&start_at_end=true&initial_zoom=5&height=650'
                     width='100%' height='645' webkitallowfullscreen mozallowfullscreen allowfullscreen frameborder='0'>
@@ -145,22 +132,9 @@
     <!-- Aquí puedes agregar más secciones o contenido según tus necesidades -->
 </body>
 <footer class="bg-dark text-light py-4">
-    <div class="container text-center">
-        <div class="row">
-            <div class="col-lg-6">
-                <p>&copy; 2023 Json Vladimir. All Right Reserved.</p>
-            </div>
-            <div class="col-lg-6 container mx-auto">
-                <ul class="list-inline text-lg-end">
-                    <li class="list-inline-item"><a href="#" class="text-decoration-none">Inicio</a></li>
-                    <li class="list-inline-item"><a href="https://www.github.com/jsonvladimir" target="_blank" class="text-light"><i class="fab fa-github fa-lg github-icon"></i></a></li>
-                    <li class="list-inline-item"><a href="https://www.instagram.com/json.vladimir" target="_blank" class="text-light"><i class="fab fa-instagram fa-lg instagram-icon"></i></a></li>
-                    <li class="list-inline-item"><a href="https://www.linkedin.com/in/JsonVladimir" target="_blank" class="text-light"><i class="fab fa-linkedin fa-lg linkedin-icon"></i></a></li>
-                    <li class="list-inline-item"><a href="https://www.facebook.com/tuusuario" target="_blank" class="text-light "><i class="fab fa-facebook fa-lg facebook-icon"></i></a></li>
-                    <li class="list-inline-item"><a href="https://www.twitter.com/tuusuario" target="_blank" class="text-light"><i class="fab fa-twitter fa-lg twitter-icon"></i></a></li>                
-                </ul>
-            </div>
-        </div>
-    </div>
+    <?php
+    include_once "utils/footer.php";
+    ?>
 </footer>
+
 </html>
